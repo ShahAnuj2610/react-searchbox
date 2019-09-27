@@ -1,6 +1,6 @@
 {
   "name": "react-searchbox-zzzzz",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "description": "React library kit based on ReactiveSearch's DataSearch",
   "main": "build/index.js",
   "scripts": {
@@ -81,9 +81,6 @@
     "webpack-dev-server": "3.2.1",
     "webpack-manifest-plugin": "2.0.4",
     "prettier": "^1.18.2"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
