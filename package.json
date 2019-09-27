@@ -27,6 +27,7 @@
     "@appbaseio/searchbase": "^1.0.0-alpha"
   },
   "devDependencies": {
+    "babel-plugin-emotion": "^10.0.19",
     "@babel/core": "7.4.3",
     "@svgr/webpack": "^4.2.0",
     "@typescript-eslint/eslint-plugin": "1.6.0",
