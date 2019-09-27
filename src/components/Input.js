@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import styled from '@emotion/styled/macro';
+import styled from '@emotion/styled';
 
 const alertBorder = ({ theme }) => css`
   border: 1px solid ${theme.colors.alertColor};

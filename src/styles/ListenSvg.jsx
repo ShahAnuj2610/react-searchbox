@@ -1,6 +1,5 @@
 import React from 'react';
-import { Global } from '@emotion/core';
-import { css } from 'emotion/macro';
+import { Global, css } from '@emotion/core';
 
 const ListenSvg = props => (
   <div>

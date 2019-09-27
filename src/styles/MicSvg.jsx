@@ -1,6 +1,5 @@
 import React from 'react';
-import { Global } from '@emotion/core';
-import { css } from 'emotion/macro';
+import { css, Global } from '@emotion/core';
 
 const MicSvg = props => (
   <div>
