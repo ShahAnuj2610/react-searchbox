@@ -1,6 +1,6 @@
 {
   "name": "react-searchbox-zzzzz",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React library kit based on ReactiveSearch's DataSearch",
   "main": "build/index.js",
   "scripts": {
