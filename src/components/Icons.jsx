@@ -2,6 +2,8 @@ import React from 'react';
 import CancelSvg from '../styles/CancelSvg';
 import InputIcon from '../styles/InputIcon';
 import SearchSvg from '../styles/SearchSvg';
+import { getClassName } from '../utils/helper';
+import Mic from './Mic';
 
 const CancelIcon = props => {
   if (props.showClear) {
@@ -27,7 +29,13 @@ const Icons = props => {
     currentValue,
     handleSearchIconClick,
     showIcon,
-    icon
+    icon,
+    enableVoiceSearch,
+    innerClass,
+    renderMic,
+    getMicInstance,
+    onMicClick,
+    micStatus
   } = props;
 
   return (
@@ -41,6 +49,16 @@ const Icons = props => {
         >
           <CancelIcon showClear={showClear} clearIcon={clearIcon} />
         </InputIcon>
+      )}
+      {enableVoiceSearch && (
+        <Mic
+          getInstance={getMicInstance}
+          render={renderMic}
+          iconPosition={iconPosition}
+          className={getClassName(innerClass, 'mic') || null}
+          onClick={onMicClick}
+          status={micStatus}
+        />
       )}
       <InputIcon
         theme={theme}

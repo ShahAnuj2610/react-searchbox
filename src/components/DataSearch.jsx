@@ -243,7 +243,10 @@ class DataSearch extends Component {
       renderError,
       renderNoSuggestion,
       icon,
-      value
+      value,
+      getMicInstance,
+      renderMic,
+      enableVoiceSearch
     } = this.props;
     const isLoading = this.searchBase.suggestionsRequestPending;
     const { isOpen, error, currentValue, suggestionsList } = this.state;
@@ -304,6 +307,12 @@ class DataSearch extends Component {
                   handleSearchIconClick={this.handleSearchIconClick}
                   icon={icon}
                   showIcon={showIcon}
+                  getMicInstance={getMicInstance}
+                  renderMic={renderMic}
+                  innerClass={innerClass}
+                  enableVoiceSearch={enableVoiceSearch}
+                  onMicClick={this.searchBase.onMicClick}
+                  micStatus={this.searchBase.micStatus}
                 />
                 {this.hasCustomRenderer &&
                   this.getComponent({
@@ -430,13 +439,11 @@ DataSearch.propTypes = {
   customHighlight: func,
   queryFormat,
   fuzziness,
-  showVoiceSearch: bool,
+  enableVoiceSearch: bool,
   searchOperators: bool,
   render: func,
   renderError: func,
   renderNoSuggestion: title,
-  getMicInstance: func,
-  renderMic: func,
   onChange: func,
   onValueChange: func,
   onSuggestions: func,
@@ -456,7 +463,10 @@ DataSearch.propTypes = {
   themePreset,
   onFocus: func,
   onKeyDown: func,
-  autoFocus: bool
+  autoFocus: bool,
+  // Mic props
+  getMicInstance: func,
+  renderMic: func
 };
 
 DataSearch.defaultProps = {
@@ -470,7 +480,7 @@ DataSearch.defaultProps = {
   debounce: 0,
   highlight: false,
   queryFormat: 'or',
-  showVoiceSearch: false,
+  enableVoiceSearch: false,
   searchOperators: false,
   className: '',
   themePreset: 'light',
