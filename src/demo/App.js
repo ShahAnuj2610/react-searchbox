@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import DataSearch from './components/DataSearch';
+import '../App.css';
+import DataSearch from '../lib/components/DataSearch';
 
 function App() {
   return (

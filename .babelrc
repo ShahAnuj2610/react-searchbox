@@ -1,4 +1,5 @@
 {
+  "presets": ["react-app"],
   "env": {
     "production": {
       "plugins": ["emotion"]
